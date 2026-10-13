@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{معرفی مقاله}{3}{0}{1}
+\beamer@sectionintoc {2}{فرض کلیدی: انتظارات عقلایی}{8}{0}{2}
+\beamer@sectionintoc {3}{ساختار مدل ریاضی}{12}{0}{3}
+\beamer@sectionintoc {4}{حل کامل مدل}{17}{0}{4}
+\beamer@sectionintoc {5}{قضیه بی‌اثری سیاست}{22}{0}{5}
+\beamer@sectionintoc {6}{اهمیت و نقدها}{27}{0}{6}
+\beamer@sectionintoc {7}{جمع‌بندی}{30}{0}{7}

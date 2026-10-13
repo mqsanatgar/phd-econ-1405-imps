@@ -1,0 +1,686 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\providecommand\UseMathForPositioningText{}
+
+% ============================================================
+% بسته‌های پایه
+% ============================================================
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathrsfs}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta, shapes.geometric, calc, shadows}
+\usepackage{fontawesome5}
+
+% ============================================================
+% بسته فارسی
+% ============================================================
+\usepackage{xepersian}
+
+\settextfont{Vazirmatn}
+% اگر Vazirmatn نداری، یکی از این‌ها را فعال کن:
+% \settextfont{XB Niloofar}
+% \settextfont{Yas}
+% \settextfont{XB Zar}
+
+% ============================================================
+% قالب Madrid
+% ============================================================
+\usetheme{Madrid}
+\useinnertheme{rectangles}
+\useoutertheme{infolines}
+
+% ============================================================
+% پالت رنگی
+% ============================================================
+\definecolor{MainBlue}{RGB}{26, 54, 93}
+\definecolor{DeepBlue}{RGB}{15, 35, 65}
+\definecolor{AccentOrange}{RGB}{230, 126, 34}
+\definecolor{SoftGray}{RGB}{245, 246, 250}
+\definecolor{TextDark}{RGB}{45, 55, 72}
+\definecolor{SuccessGreen}{RGB}{39, 174, 96}
+\definecolor{AlertRed}{RGB}{192, 57, 43}
+
+\setbeamercolor{normal text}{fg=TextDark, bg=white}
+\setbeamercolor{alerted text}{fg=AlertRed}
+\setbeamercolor{example text}{fg=SuccessGreen}
+\setbeamercolor{palette primary}{fg=white, bg=MainBlue}
+\setbeamercolor{palette secondary}{fg=white, bg=DeepBlue}
+\setbeamercolor{palette tertiary}{fg=white, bg=MainBlue}
+\setbeamercolor{palette quaternary}{fg=white, bg=DeepBlue}
+\setbeamercolor{frametitle}{fg=white, bg=MainBlue}
+\setbeamercolor{title}{fg=MainBlue}
+\setbeamercolor{structure}{fg=MainBlue}
+\setbeamercolor{block title}{fg=white, bg=MainBlue}
+\setbeamercolor{block body}{fg=TextDark, bg=SoftGray}
+\setbeamercolor{block title alerted}{fg=white, bg=AlertRed}
+\setbeamercolor{block body alerted}{fg=TextDark, bg=SoftGray}
+\setbeamercolor{block title example}{fg=white, bg=SuccessGreen}
+\setbeamercolor{block body example}{fg=TextDark, bg=SoftGray}
+\setbeamercolor{section in toc}{fg=MainBlue}
+\setbeamercolor{subsection in toc}{fg=AccentOrange}
+
+% ============================================================
+% تنظیمات ظاهری
+% ============================================================
+\setbeamertemplate{navigation symbols}{}
+\setbeamerfont{frametitle}{size=\large, series=\bfseries}
+\setbeamerfont{title}{size=\LARGE, series=\bfseries}
+\setbeamerfont{subtitle}{size=\large}
+\setbeamerfont{section in toc}{size=\small, series=\bfseries}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
+\setbeamertemplate{itemize item}{\textcolor{AccentOrange}{\small$\blacktriangleright$}}
+\setbeamertemplate{itemize subitem}{\textcolor{MainBlue}{\tiny$\bullet$}}
+\setbeamertemplate{enumerate item}{\textcolor{AccentOrange}{\textbf{\arabic{enumi}.}}}
+
+% ============================================================
+% استایل‌های TikZ
+% ============================================================
+\tikzset{
+  flowchartbox/.style={
+    rectangle, rounded corners, draw=MainBlue, fill=SoftGray,
+    text width=10cm, align=center, minimum height=0.6cm,
+    font=\footnotesize, inner sep=5pt
+  },
+  flowchartarrow/.style={
+    -{Stealth[length=2.5mm]}, thick, AccentOrange
+  },
+  stepbox/.style={
+    rectangle, rounded corners, draw=MainBlue, fill=SoftGray,
+    text width=11cm, align=center, minimum height=0.55cm,
+    font=\scriptsize, inner sep=4pt
+  }
+}
+
+% ============================================================
+% اطلاعات عنوان
+% ============================================================
+\title{پس از اقتصاد کلان کینزی}
+\subtitle{\lr{Lucas, R. \& Sargent, T. (1981)}}
+\author{رابرت لوکاس و توماس سارجنت}
+\institute{}
+\date{}
+
+% ============================================================
+% دستورات سفارشی
+% ============================================================
+\newcommand{\highlight}[1]{\textcolor{AccentOrange}{\textbf{#1}}}
+\newcommand{\important}[1]{\textcolor{AlertRed}{\textbf{#1}}}
+\newcommand{\keyword}[1]{\textcolor{MainBlue}{\textbf{#1}}}
+
+\begin{document}
+
+% ============================================================
+% اسلاید عنوان
+% ============================================================
+
+
+{
+\setbeamertemplate{background}{
+	\begin{tikzpicture}[remember picture, overlay]
+		% پس‌زمینه ساده آبی تیره
+		\fill[MainBlue] (current page.south west) rectangle (current page.north east);
+
+		% نوار نارنجی عمودی در سمت راست
+		\fill[AccentOrange]
+		([xshift=-0.4cm]current page.north east) rectangle (current page.north east);
+		\fill[AccentOrange]
+		([xshift=-0.4cm]current page.south east) rectangle (current page.south east);
+
+		% آیکون کوچک در گوشه بالا-راست
+		\node[opacity=0.2, text=white, font=\fontsize{60}{60}\selectfont, anchor=north east]
+		at ([xshift=-1cm, yshift=-0.8cm]current page.north east) {\faChartLine};
+	\end{tikzpicture}
+}
+\begin{frame}[plain]
+	\begin{center}
+		\vspace{0.6cm}
+
+		% عنوان مقاله
+		{\color{white}\fontsize{24}{30}\selectfont\bfseries پس از اقتصاد کلان کینزی}\\[0.4cm]
+
+		% نویسندگان مقاله
+		{\color{AccentOrange}\normalsize \lr{Lucas, R. \& Sargent, T. (1981)}}\\[0.8cm]
+
+		% خط جداکننده ساده
+		{\color{white!40}\rule{8cm}{0.4pt}}\\[0.6cm]
+
+		% اطلاعات ارائه‌دهنده (بدون TikZ)
+		{\color{white}\small ارائه‌دهنده}\\[0.15cm]
+		{\color{white}\Large\bfseries مسعود صنعتگر قوچانی}\\[0.5cm]
+
+		{\color{white}\small استاد درس}\\[0.15cm]
+		{\color{white}\Large\bfseries دکتر مسعود محمدی الموتی}\\[0.5cm]
+
+		{\color{AccentOrange}\normalsize ۲۱ مهر ۱۴۰۵}
+
+	\end{center}
+\end{frame}
+}
+
+
+
+
+% ============================================================
+% فهرست مطالب
+% ============================================================
+\begin{frame}{فهرست مطالب}
+	\begin{LTR}
+		\begin{columns}[t]
+			\begin{column}{0.48\textwidth}
+				\begin{RTL}
+					\begin{block}{\faListUl\ بخش دوم}
+						\tableofcontents[sections={5-8}]
+					\end{block}
+				\end{RTL}
+			\end{column}
+			\hfill
+			\begin{column}{0.48\textwidth}
+				\begin{RTL}
+					\begin{block}{\faListUl\ بخش اول}
+						\tableofcontents[sections={1-4}]
+					\end{block}
+				\end{RTL}
+			\end{column}
+		\end{columns}
+	\end{LTR}
+\end{frame}
+
+% ============================================================
+\section{معرفی مقاله}
+% ============================================================
+
+\begin{frame}{اطلاعات کتاب‌شناختی}
+	\begin{LTR}
+		\begin{columns}[T]
+			\begin{column}{0.60\textwidth}
+				\begin{RTL}
+					\begin{itemize}
+						\item \keyword{نویسندگان:} \lr{Robert E. Lucas, Jr.} و \lr{Thomas J. Sargent}
+						\item \keyword{عنوان:} \lr{After Keynesian Macroeconomics}
+						\item \keyword{منبع:} در کتاب \lr{Rational Expectations and Econometric Practice}
+						\item \keyword{انتشار:} \lr{University of Minnesota Press}، ۱۹۸۱
+						\item \keyword{ارائه اولیه:} کنفرانس \lr{Federal Reserve Bank of Minneapolis}، ۱۹۷۸
+					\end{itemize}
+				\end{RTL}
+			\end{column}
+			\hfill
+			\begin{column}{0.35\textwidth}
+				\begin{RTL}
+					\begin{block}{}
+						\centering
+						{\color{MainBlue}\Huge\faBookOpen}\\[0.4cm]
+						{\footnotesize\lr{University of Minnesota Press}}\\[0.2cm]
+						{\small ۱۹۸۱}
+					\end{block}
+				\end{RTL}
+			\end{column}
+		\end{columns}
+	\end{LTR}
+\end{frame}
+
+\begin{frame}{زمینه تاریخی مقاله}
+	\begin{block}{دهه ۱۹۶۰: دوران طلایی کینزی}
+		\begin{itemize}
+			\item کاربرد موفق اصول کینزی در سیاست اقتصادی آمریکا
+			\item روابط کمی ساده بین سیاست مالی و فعالیت اقتصادی
+			\item رشد اقتصادی روان در دوران کندی-جانسون
+		\end{itemize}
+	\end{block}
+	\vspace{0.3cm}
+	\begin{alertblock}{دهه ۱۹۷۰: بحران}
+		\begin{itemize}
+			\item اولین رکود بزرگ از دهه ۱۹۳۰
+			\item تورم بیش از ۱۰ درصد سالانه (رکود تورمی)
+			\item کسری بودجه عظیم و انبساط پولی
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}{پرسش اصلی مقاله}
+	\begin{block}{پرسش محوری}
+		\centering
+		\large
+		آیا مدل‌های اقتصاد کلان کینزی می‌توانند راهنمای قابل اعتمادی برای سیاست‌گذاری پولی و مالی باشند؟
+	\end{block}
+	\vspace{0.5cm}
+	\begin{alertblock}{پاسخ مقاله}
+		\centering
+		\large
+		\important{خیر.} این مدل‌ها در دهه ۱۹۷۰ شکست فاحشی خوردند و شکست آن‌ها \important{کشنده} است.
+		\vspace{0.2cm}
+
+		هیچ امیدی به اصلاح آن‌ها نیست. باید چارچوب کاملاً جدیدی ساخت.
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}{ساختار منطقی مقاله}
+	\begin{center}
+		\begin{tikzpicture}[node distance=0.6cm]
+			\node[flowchartbox] (a) {\begin{RTL}\textbf{مشاهده:} شکست مدل‌های کینزی در دهه ۱۹۷۰\end{RTL}};
+			\node[flowchartbox, below=of a] (b) {\begin{RTL}\textbf{تشخیص ۱:} فقدان پایه‌های خرد در مدل‌های کینزی\end{RTL}};
+			\node[flowchartbox, below=of b] (c) {\begin{RTL}\textbf{تشخیص ۲:} انتظارات تطبیقی ناسازگار با بهینه‌سازی\end{RTL}};
+			\node[flowchartbox, below=of c, fill=AccentOrange!20, draw=AccentOrange] (d) {\begin{RTL}\textbf{راه‌حل:} اقتصاد کلان تعادلی (کلاسیک جدید)\end{RTL}};
+
+			\draw[flowchartarrow] (a) -- (b);
+			\draw[flowchartarrow] (b) -- (c);
+			\draw[flowchartarrow] (c) -- (d);
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+% ============================================================
+\section{نقد مدل‌های کینزی}
+% ============================================================
+
+\begin{frame}{مدل اقتصادسنجی استاندارد}
+	\begin{block}{شکل ساختاری}
+		\[
+			A_0 y_t + A_1 y_{t-1} + \ldots + A_m y_{t-m} = B_0 x_t + \ldots + B_n x_{t-n} + \epsilon_t
+		\]
+	\end{block}
+	\begin{itemize}
+		\item $y_t$: متغیرهای درون‌زا
+		\item $x_t$: متغیرهای برون‌زا
+		\item $\epsilon_t$: شوک‌های تصادفی
+	\end{itemize}
+	\vspace{0.3cm}
+	\begin{exampleblock}{شکل کاهش‌یافته}
+		\[
+			y_t = -P_1 y_{t-1} - \ldots + Q_0 x_t + \ldots + A_0^{-1} u_t
+		\]
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{مسئله شناسایی}
+	\begin{alertblock}{مشکل اساسی}
+		\centering
+		\large
+		نمی‌توان از تخمین‌های $P$ و $Q$ به تخمین‌های یکتای پارامترهای ساختاری $A$، $B$ و $R$ رسید.
+	\end{alertblock}
+	\vspace{0.3cm}
+	\begin{block}{راه‌حل سنتی}
+		اعمال محدودیت‌های پیشینی (a priori) بر پارامترها:
+		\begin{enumerate}
+			\item صفر کردن بسیاری از عناصر $A$ و $B$
+			\item محدودیت بر ساختار خطاها ($R$)
+			\item طبقه‌بندی متغیرها به درون‌زا و برون‌زا
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{نقد اول: محدودیت‌های خودسرانه}
+	\begin{alertblock}{نقد محدودیت‌های نوع (a)}
+		\begin{itemize}
+			\item کینز روابط ساده‌ای پیشنهاد داد (مثل تابع مصرف)
+			\item اما نظریه خرد مدرن \important{هیچ‌کدام} از این محدودیت‌ها را توجیه نمی‌کند
+			\item نظریه احتمال مدرن تقریباً هرگز محدودیت‌های حذفی کینزی را نتیجه نمی‌دهد
+		\end{itemize}
+	\end{alertblock}
+	\vspace{0.3cm}
+	\begin{exampleblock}{مثال: انتظارات}
+		\begin{itemize}
+			\item انتظارات در بسیاری از معادلات نقش کلیدی دارند
+			\item مدل‌ها معمولاً انتظارات را تابعی از چند وقفه ساده فرض می‌کنند
+			\item اما عامل عقلایی باید از \highlight{همه اطلاعات موجود} استفاده کند
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{نقد دوم: محدودیت‌های خطاها}
+	\begin{alertblock}{نقد محدودیت‌های نوع (b)}
+		\begin{itemize}
+			\item فرض می‌شود ماتریس $R$ قطری است
+			\item همبستگی سریالی متقابل بین معادلات نادیده گرفته می‌شود
+			\item مرتبه $\epsilon_t$ کوتاه فرض می‌شود
+		\end{itemize}
+	\end{alertblock}
+	\vspace{0.3cm}
+	\begin{block}{نقد}
+		\centering
+		\large
+		\important{هیچ مبنای نظری} برای این محدودیت‌ها وجود ندارد.
+		\vspace{0.2cm}
+
+		چشم‌اندازی برای ارائه چنین مبانی در آینده نزدیک وجود ندارد.
+	\end{block}
+\end{frame}
+
+\begin{frame}{نقد سوم: طبقه‌بندی خودسرانه متغیرها}
+	\begin{alertblock}{نقد محدودیت‌های نوع (c)}
+		\begin{itemize}
+			\item متغیرها به‌طور پیشینی به درون‌زا و برون‌زا تقسیم می‌شوند
+			\item این تقسیم بر اساس «کنترل دولت» است، نه ارتباط واقعی تاریخی
+		\end{itemize}
+	\end{alertblock}
+	\vspace{0.3cm}
+	\begin{exampleblock}{راه‌حل سیمز (\lr{Sims, 1972})}
+		\centering
+		در چارچوب سری‌های زمانی، \highlight{برون‌زایی} یک فرضیه آزمون‌پذیر است، نه یک طبقه‌بندی پیشینی.
+	\end{exampleblock}
+\end{frame}
+
+% ============================================================
+\section{اقتصاد کلان تعادلی}
+% ============================================================
+
+\begin{frame}{مدل تعادلی: اصول}
+	\begin{block}{دو فرض بنیادی}
+		\begin{enumerate}
+			\item \keyword{بازارها تسویه می‌شوند} (Markets Clear)
+			\item \keyword{عوامل بهینه‌سازی می‌کنند} (Agents Optimize)
+		\end{enumerate}
+	\end{block}
+	\vspace{0.3cm}
+	\begin{exampleblock}{نوآوری کلیدی: اطلاعات ناقص}
+		\begin{itemize}
+			\item عوامل اطلاعات \highlight{محدود} دارند
+			\item اطلاعات درباره برخی قیمت‌ها را بیشتر از بقیه دریافت می‌کنند
+			\item بر اساس اطلاعات محدود، بهترین تخمین را از قیمت‌های نسبی می‌زنند
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{مکانیسم ایجاد نوسان}
+	\begin{center}
+		\begin{tikzpicture}[node distance=0.35cm]
+			\node[stepbox] (s1) {\begin{RTL}\textbf{۱.} افزایش عمومی قیمت‌ها اتفاق می‌افتد\end{RTL}};
+			\node[stepbox, below=of s1] (s2) {\begin{RTL}\textbf{۲.} هر عامل فکر می‌کند قیمت نسبی کالای او بالا رفته\end{RTL}};
+			\node[stepbox, below=of s2] (s3) {\begin{RTL}\textbf{۳.} عرضه کالای خود را افزایش می‌دهد\end{RTL}};
+			\node[stepbox, below=of s3] (s4) {\begin{RTL}\textbf{۴.} همه همین اشتباه را مرتکب می‌شوند\end{RTL}};
+			\node[stepbox, below=of s4, fill=AccentOrange!20, draw=AccentOrange] (s5) {\begin{RTL}\textbf{۵.} تولید کل از سطح طبیعی فراتر می‌رود\end{RTL}};
+
+			\foreach \i/\j in {s1/s2, s2/s3, s3/s4, s4/s5}
+			\draw[flowchartarrow] (\i) -- (\j);
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+\begin{frame}{نتیجه کلیدی: فقط شوک‌های غیرمنتظره اثر دارند}
+	\begin{alertblock}{قضیه محوری}
+		\centering
+		\large
+		تولید فقط وقتی از سطح طبیعی فاصله می‌گیرد که سطح قیمت واقعی با انتظار قبلی \important{تفاوت} داشته باشد.
+	\end{alertblock}
+	\vspace{0.4cm}
+	\begin{columns}[T]
+		\begin{column}{0.48\textwidth}
+			\begin{exampleblock}{اگر $p_t > E_{t-1}p_t$}
+				\centering
+				تولید \highlight{افزایش} می‌یابد
+			\end{exampleblock}
+		\end{column}
+		\hfill
+		\begin{column}{0.48\textwidth}
+			\begin{alertblock}{اگر $p_t < E_{t-1}p_t$}
+				\centering
+				تولید \important{کاهش} می‌یابد
+			\end{alertblock}
+		\end{column}
+	\end{columns}
+	\vspace{0.3cm}
+	\begin{block}{فرض کلیدی}
+		\centering
+		\keyword{انتظارات عقلایی}: عوامل بهترین استفاده را از اطلاعات محدود خود می‌کنند.
+	\end{block}
+\end{frame}
+
+% ============================================================
+\section{نقدهای وارد بر نظریه تعادلی}
+% ============================================================
+
+\begin{frame}{چهار نقد اصلی}
+	\begin{block}{نقدهای مطرح‌شده}
+		\begin{enumerate}
+			\item[(الف)] مدل‌های تعادلی فرض غیرواقعی \highlight{تسویه بازارها} را دارند
+			\item[(ب)] این مدل‌ها نمی‌توانند \highlight{ماندگاری} (Persistence) نوسانات را توضیح دهند
+			\item[(ج)] مدل‌های اقتصادسنجی \highlight{خطی} هستند
+			\item[(د)] \highlight{یادگیری} در این مدل‌ها لحاظ نشده است
+		\end{enumerate}
+	\end{block}
+	\vspace{0.3cm}
+	\begin{exampleblock}{پاسخ مقاله}
+		\centering
+		هیچ‌کدام از این نقدها \important{کشنده} نیستند.
+		\vspace{0.2cm}
+
+		هیچ دلیل محکمی وجود ندارد که مدل‌های تعادلی \important{اصولاً} قادر به توضیح چرخه‌های تجاری نباشند.
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{پاسخ به نقد (الف): تسویه بازارها}
+	\begin{alertblock}{نقد}
+		\centering
+		بازار کار تسویه نمی‌شود؛ قراردادهای بلندمدت وجود دارند.
+	\end{alertblock}
+	\vspace{0.3cm}
+	\begin{exampleblock}{پاسخ}
+		\begin{itemize}
+			\item قراردادهای بلندمدت \important{خود} می‌توانند در چارچوب تعادلی توضیح داده شوند
+			\item اگر قراردادها بر اساس همان اطلاعاتی بسته شوند که در تسویه دوره‌به‌دوره وجود دارد، نتیجه یکسان است
+			\item \lr{Arrow-Debreu} نشان می‌دهد قراردادهای بلندمدت با تسویه دوره‌ای سازگارند
+			\item مجموعه اطلاعاتی که قراردادها بر آن مشروط می‌شوند، \highlight{ثابت نیست} و با تغییر رژیم سیاستی تغییر می‌کند
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{پاسخ به نقد (ب): ماندگاری نوسانات}
+	\begin{alertblock}{نقد \lr{Tobin} و \lr{Modigliani}}
+		\centering
+		اگر خطاهای پیش‌بینی بدون همبستگی سریالی باشند، چگونه می‌توانند نوسانات \important{پایدار} تولید را توضیح دهند؟
+	\end{alertblock}
+	\vspace{0.3cm}
+	\begin{exampleblock}{پاسخ: تفکیک انگیزه از مکانیسم انتشار}
+		\begin{itemize}
+			\item \highlight{انگیزه‌ها} (Impulses): خطاهای پیش‌بینی، بدون همبستگی سریالی
+			\item \highlight{مکانیسم‌های انتشار} (Propagation): تبدیل انگیزه‌ها به نوسانات پایدار
+			\item تمایزی که \lr{Frisch (1933)} بر آن تأکید کرد
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{سه مکانیسم انتشار}
+	\begin{block}{۱. هزینه‌های تعدیل سرمایه و نیروی کار}
+		\centering
+		شرکت‌ها پاسخ خود به سیگنال‌های قیمتی را در طول زمان پخش می‌کنند.
+	\end{block}
+	\vspace{0.2cm}
+	\begin{block}{۲. انباشت بهینه دارایی‌ها}
+		\centering
+		خانوارها تغییرات غیرمنتظره درآمد را بین مصرف و پس‌انداز تقسیم می‌کنند.
+	\end{block}
+	\vspace{0.2cm}
+	\begin{block}{۳. نظریه جست‌وجو (\lr{Search Theory})}
+		\centering
+		بیکاران منتظر پیشنهادهای بهتر می‌مانند؛ بنگاه‌ها منتظر متقاضیان مناسب‌تر.
+	\end{block}
+\end{frame}
+
+\begin{frame}{پاسخ به نقد (ج): خطی بودن}
+	\begin{alertblock}{نقد}
+		\centering
+		مدل‌های خطی نمی‌توانند اثرات مومنت‌های مرتبه بالاتر را تشخیص دهند.
+	\end{alertblock}
+	\vspace{0.3cm}
+	\begin{exampleblock}{پاسخ}
+		\begin{itemize}
+			\item \important{هیچ دلیل نظری} برای خطی بودن وجود ندارد
+			\item فقط \highlight{دلایل فنی} (توان محاسباتی) باعث استفاده از مدل‌های خطی می‌شود
+			\item مسائل بهینه‌سازی تصادفی پویا با اهداف درجه دوم، قواعد تصمیم خطی تولید می‌کنند
+			\item این کلاس از توابع، \highlight{قابلیت تحلیلی} لازم را دارند
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{پاسخ به نقد (د): یادگیری}
+	\begin{alertblock}{نقد \lr{Friedman} و \lr{Modigliani}}
+		\centering
+		مدل‌های تعادلی فرض می‌کنند عوامل مدل‌های احتمالی را \important{قبلاً یاد گرفته‌اند}.
+	\end{alertblock}
+	\vspace{0.3cm}
+	\begin{exampleblock}{پاسخ}
+		\begin{itemize}
+			\item فرض \highlight{ایستایی} فقط برای سادگی تحلیلی است، نه ضرورت
+			\item می‌توان از \keyword{فیلتر کالمن} برای یادگیری بیزی استفاده کرد
+			\item قواعد تصمیم با ضرایب وابسته به زمان به دست می‌آیند
+			\item \important{هیچ مدل کینزی} هم مدل اقتصادی یادگیری ندارد
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+
+% ============================================================
+\section{پیام‌های سیاستی}
+% ============================================================
+
+\begin{frame}{پیام‌های سیاستی مقاله}
+	\begin{LTR}
+		\begin{columns}[T]
+			\begin{column}{0.48\textwidth}
+				\begin{alertblock}{اگر دولت...}
+					\begin{itemize}
+						\item سیاست را نظام‌مند کند
+						\item قاعده پولی را تغییر دهد
+						\item اطلاعات نادرست پخش کند
+					\end{itemize}
+				\end{alertblock}
+			\end{column}
+			\hfill
+			\begin{column}{0.48\textwidth}
+				\begin{exampleblock}{آنگاه...}
+					\begin{itemize}
+						\item فقط اختلال ایجاد می‌شود
+						\item رفتار عوامل پیش‌بینی می‌شود
+						\item رفاه بهبود نمی‌یابد
+					\end{itemize}
+				\end{exampleblock}
+			\end{column}
+		\end{columns}
+	\end{LTR}
+	\vspace{0.4cm}
+	\begin{block}{پیام اصلی}
+		\centering
+		\large
+		سیاست باید به‌عنوان \highlight{انتخاب قواعد پایدار بازی} در نظر گرفته شود که عوامل اقتصادی به‌خوبی آن را می‌فهمند.
+	\end{block}
+\end{frame}
+
+\begin{frame}{نتیجه‌گیری مقاله}
+	\begin{block}{چهار نتیجه اصلی}
+		\begin{enumerate}
+			\item مدل‌های کینزی \important{نمی‌توانند} راهنمای قابل اعتمادی برای سیاست باشند.
+			\item \important{هیچ امیدی} به اصلاح این مدل‌ها نیست.
+			\item مدل‌های \keyword{تعادلی} چارچوب جایگزین مناسبی ارائه می‌دهند.
+			\item این مدل‌ها \highlight{ویژگی‌های کیفی اصلی} چرخه‌های تجاری را توضیح می‌دهند.
+		\end{enumerate}
+	\end{block}
+	\vspace{0.3cm}
+	\begin{exampleblock}{هدف نهایی}
+		\centering
+		ارائه ابزار علمی برای ارزیابی کمی اثرات سیاست‌های اقتصادی جایگزین.
+		\vspace{0.2cm}
+
+		\important{بدون} موفقیت‌های اقتصادسنجی مدل‌های کینزی، این هدف غیرقابل تصور بود.
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{میراث مقاله}
+	\begin{block}{تأثیرات بلندمدت}
+		\begin{itemize}
+			\item زمینه‌ساز \keyword{نظریه چرخه‌های تجاری حقیقی} (\lr{RBC})
+			\item الهام‌بخش \highlight{مدل‌های کینزی جدید} (\lr{New Keynesian})
+			\item پایه‌گذار \important{هدف‌گذاری تورم} و \important{استقلال بانک مرکزی}
+			\item منبع اصلی \highlight{قاعده تیلور} و قواعد سیاست پولی
+		\end{itemize}
+	\end{block}
+	\vspace{0.3cm}
+	\begin{exampleblock}{جمع‌بندی}
+		\centering
+		این مقاله را می‌توان «\important{گواهی فوت}» اقتصاد کلان کینزی سنتی دانست که راه را برای تسلط مکتب کلاسیک جدید در دهه‌های ۱۹۸۰ و ۱۹۹۰ هموار کرد.
+	\end{exampleblock}
+\end{frame}
+
+% ============================================================
+\section{جمع‌بندی}
+% ============================================================
+
+\begin{frame}{جمع‌بندی نهایی}
+	\begin{block}{پیام اصلی}
+		\centering
+		\large
+		مدل‌های اقتصاد کلان کینزی در دهه ۱۹۷۰ \important{شکست فاحشی} خوردند و این شکست \important{کشنده} است.
+	\end{block}
+	\vspace{0.5cm}
+	\begin{LTR}
+		\begin{columns}[T]
+			\begin{column}{0.48\textwidth}
+				\begin{RTL}
+					\begin{itemize}
+						\item \keyword{تشخیص:} فقدان پایه‌های خرد
+						\item \keyword{راه‌حل:} اقتصاد کلان تعادلی
+					\end{itemize}
+				\end{RTL}
+			\end{column}
+			\hfill
+			\begin{column}{0.48\textwidth}
+				\begin{RTL}
+					\begin{itemize}
+						\item \keyword{پیام:} انتخاب قواعد پایدار
+						\item \keyword{میراث:} کلاسیک جدید و RBC
+					\end{itemize}
+				\end{RTL}
+			\end{column}
+		\end{columns}
+	\end{LTR}
+\end{frame}
+
+\begin{frame}{جمع‌بندی نهایی}
+	\begin{block}{پیام اصلی}
+		\centering
+		\large
+		مدل‌های اقتصاد کلان کینزی در دهه ۱۹۷۰ \important{شکست فاحشی} خوردند و این شکست \important{کشنده} است.
+	\end{block}
+	\vspace{0.5cm}
+	\begin{LTR}
+		\begin{columns}[T]
+			\begin{column}{0.48\textwidth}
+				\begin{RTL}
+					\begin{itemize}
+						\item \keyword{تشخیص:} فقدان پایه‌های خرد
+						\item \keyword{راه‌حل:} اقتصاد کلان تعادلی
+					\end{itemize}
+				\end{RTL}
+			\end{column}
+			\hfill
+			\begin{column}{0.48\textwidth}
+				\begin{RTL}
+					\begin{itemize}
+						\item \keyword{پیام:} انتخاب قواعد پایدار
+						\item \keyword{میراث:} کلاسیک جدید و RBC
+					\end{itemize}
+				\end{RTL}
+			\end{column}
+		\end{columns}
+	\end{LTR}
+\end{frame}
+
+{
+	\setbeamertemplate{background}{
+		\begin{tikzpicture}[remember picture, overlay]
+			\fill[MainBlue] (current page.south west) rectangle (current page.north east);
+			\node[opacity=0.08, text=white, font=\fontsize{150}{150}\selectfont]
+			at (current page.center) {\faChartLine};
+		\end{tikzpicture}
+	}
+	\begin{frame}[plain]
+		\centering
+		\vspace{1.5cm}
+		{\color{white}\Huge\bfseries پایان مقاله دوم}\\[0.8cm]
+		{\color{white}\large پایان ارائه}\\[0.5cm]
+		{\color{AccentOrange}\Large\bfseries با تشکر از توجه شما}
+	\end{frame}
+}
+
+\end{document}

@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{معرفی مقاله}{3}{0}{1}
+\beamer@sectionintoc {2}{نقد مدل‌های کینزی}{7}{0}{2}
+\beamer@sectionintoc {3}{اقتصاد کلان تعادلی}{12}{0}{3}
+\beamer@sectionintoc {4}{نقدهای وارد بر نظریه تعادلی}{15}{0}{4}
+\beamer@sectionintoc {5}{پیام‌های سیاستی}{21}{0}{5}
+\beamer@sectionintoc {6}{جمع‌بندی}{24}{0}{6}

@@ -1,0 +1,791 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\providecommand\UseMathForPositioningText{}
+
+% ============================================================
+% بسته‌های پایه
+% ============================================================
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathrsfs}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta, shapes.geometric, calc, shadows}
+\usepackage{fontawesome5}
+
+% ============================================================
+% بسته فارسی
+% ============================================================
+\usepackage{xepersian}
+
+\settextfont{Vazirmatn}
+% اگر Vazirmatn نداری، یکی از این‌ها را فعال کن:
+% \settextfont{XB Niloofar}
+% \settextfont{Yas}
+% \settextfont{XB Zar}
+% \settextfont{Amiri}
+% \settextfont{FreeSerif}
+
+% ============================================================
+% قالب
+% ============================================================
+\usetheme{metropolis}
+
+% ============================================================
+% پالت رنگی
+% ============================================================
+\definecolor{MainBlue}{RGB}{26, 54, 93}
+\definecolor{DeepBlue}{RGB}{15, 35, 65}
+\definecolor{AccentOrange}{RGB}{230, 126, 34}
+\definecolor{SoftGray}{RGB}{245, 246, 250}
+\definecolor{TextDark}{RGB}{45, 55, 72}
+\definecolor{SuccessGreen}{RGB}{39, 174, 96}
+\definecolor{AlertRed}{RGB}{192, 57, 43}
+
+\setbeamercolor{normal text}{fg=TextDark, bg=white}
+\setbeamercolor{alerted text}{fg=AlertRed}
+\setbeamercolor{example text}{fg=SuccessGreen}
+\setbeamercolor{palette primary}{fg=white, bg=MainBlue}
+\setbeamercolor{frametitle}{fg=white, bg=MainBlue}
+\setbeamercolor{title}{fg=MainBlue}
+\setbeamercolor{structure}{fg=MainBlue}
+\setbeamercolor{block title}{fg=white, bg=MainBlue}
+\setbeamercolor{block body}{fg=TextDark, bg=SoftGray}
+\setbeamercolor{block title alerted}{fg=white, bg=AlertRed}
+\setbeamercolor{block body alerted}{fg=TextDark, bg=SoftGray}
+\setbeamercolor{block title example}{fg=white, bg=SuccessGreen}
+\setbeamercolor{block body example}{fg=TextDark, bg=SoftGray}
+\setbeamercolor{section in toc}{fg=MainBlue}
+\setbeamercolor{subsection in toc}{fg=AccentOrange}
+
+% ============================================================
+% تنظیمات ظاهری
+% ============================================================
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\setbeamerfont{frametitle}{size=\large, series=\bfseries}
+\setbeamerfont{title}{size=\LARGE, series=\bfseries}
+\setbeamerfont{subtitle}{size=\large}
+\setbeamerfont{section in toc}{size=\small, series=\bfseries}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
+\setbeamertemplate{itemize item}{\textcolor{AccentOrange}{\small$\blacktriangleright$}}
+\setbeamertemplate{itemize subitem}{\textcolor{MainBlue}{\tiny$\bullet$}}
+\setbeamertemplate{enumerate item}{\textcolor{AccentOrange}{\textbf{\arabic{enumi}.}}}
+
+% ============================================================
+% استایل‌های TikZ
+% ============================================================
+\tikzset{
+  flowchartbox/.style={
+    rectangle, rounded corners, draw=MainBlue, fill=SoftGray,
+    text width=10cm, align=center, minimum height=0.6cm,
+    font=\footnotesize, inner sep=5pt
+  },
+  flowchartarrow/.style={
+    -{Stealth[length=2.5mm]}, thick, AccentOrange
+  },
+  stepbox/.style={
+    rectangle, rounded corners, draw=MainBlue, fill=SoftGray,
+    text width=11cm, align=center, minimum height=0.55cm,
+    font=\scriptsize, inner sep=4pt
+  }
+}
+
+% ============================================================
+% اطلاعات عنوان
+% ============================================================
+\title{انتظارات عقلایی و نظریه سیاست اقتصادی}
+\subtitle{\lr{Sargent, T. \& Wallace, N. (1981)}}
+\author{توماس سارجنت و نیل والاس}
+\institute{}
+\date{}
+
+% ============================================================
+% دستورات سفارشی
+% ============================================================
+\newcommand{\highlight}[1]{\textcolor{AccentOrange}{\textbf{#1}}}
+\newcommand{\important}[1]{\textcolor{AlertRed}{\textbf{#1}}}
+\newcommand{\keyword}[1]{\textcolor{MainBlue}{\textbf{#1}}}
+
+\begin{document}
+
+% ============================================================
+% اسلاید عنوان زیبا و رنگی
+% ============================================================
+{
+\setbeamertemplate{background}{
+  \begin{tikzpicture}[remember picture, overlay]
+    % پس‌زمینه اصلی
+    \fill[MainBlue] (current page.south west) rectangle (current page.north east);
+
+    % گرادیان تزئینی در بالا
+    \fill[DeepBlue, opacity=0.4]
+      (current page.south west) rectangle ([yshift=0.5\paperheight]current page.north west);
+
+    % نوار نارنجی بالا
+    \fill[AccentOrange]
+      ([yshift=-0.3cm]current page.north west) rectangle (current page.north east);
+
+    % نوار نارنجی پایین
+    \fill[AccentOrange]
+      (current page.south west) rectangle ([yshift=0.3cm]current page.south east);
+
+    % آیکون بزرگ کم‌رنگ
+    \node[opacity=0.05, text=white, font=\fontsize{180}{180}\selectfont]
+      at (current page.center) {\faChartLine};
+
+    % دایره تزئینی نارنجی کم‌رنگ در گوشه بالا-راست
+    \fill[AccentOrange, opacity=0.15]
+      ([xshift=-2cm, yshift=-1cm]current page.north east) circle (3cm);
+
+    % دایره تزئینی آبی روشن در گوشه پایین-چپ
+    \fill[AccentOrange, opacity=0.1]
+      ([xshift=2cm, yshift=1cm]current page.south west) circle (2.5cm);
+  \end{tikzpicture}
+}
+\begin{frame}[plain]
+  \begin{center}
+    \vspace{0.4cm}
+
+    % عنوان مقاله
+    {\color{white}\fontsize{22}{28}\selectfont\bfseries انتظارات عقلایی و نظریه سیاست اقتصادی}\\[0.3cm]
+
+    % نویسندگان مقاله
+    {\color{AccentOrange}\normalsize \lr{Sargent, T. \& Wallace, N. (1981)}}\\[0.4cm]
+
+    % خط جداکننده تزئینی با نقطه
+    \begin{tikzpicture}
+      \draw[AccentOrange, thick] (-3,0) -- (-0.3,0);
+      \fill[AccentOrange] (0,0) circle (2pt);
+      \draw[AccentOrange, thick] (0.3,0) -- (3,0);
+    \end{tikzpicture}\\[0.4cm]
+
+    % کارت ارائه‌دهنده
+    \begin{tikzpicture}
+      \node[fill=AccentOrange!20, rounded corners=8pt,
+            draw=AccentOrange, line width=0.8pt,
+            inner sep=6pt, minimum width=8cm, align=center] {
+        \color{white}\small ارائه‌دهنده\\[0.1cm]
+        \color{AccentOrange}\large\bfseries مسعود صنعتگر قوچانی
+      };
+    \end{tikzpicture}\\[0.25cm]
+
+    % کارت استاد
+    \begin{tikzpicture}
+      \node[fill=white!15, rounded corners=8pt,
+            draw=white!40, line width=0.8pt,
+            inner sep=6pt, minimum width=8cm, align=center] {
+        \color{white}\small استاد درس\\[0.1cm]
+        \color{white}\large\bfseries دکتر مسعود محمدی الموتی
+      };
+    \end{tikzpicture}\\[0.25cm]
+
+    % کارت تاریخ
+    \begin{tikzpicture}
+      \node[fill=AccentOrange, rounded corners=8pt,
+            inner sep=5pt, minimum width=5cm, align=center] {
+        \color{white}\small تاریخ ارائه\\[0.1cm]
+        \color{white}\large\bfseries ۲۱ مهر ۱۴۰۵
+      };
+    \end{tikzpicture}
+
+  \end{center}
+\end{frame}
+}
+
+% ============================================================
+% فهرست مطالب (بخش اول راست، بخش دوم چپ)
+% ============================================================
+\begin{frame}{فهرست مطالب}
+  \begin{LTR}
+  \begin{columns}[t]
+    \begin{column}{0.48\textwidth}
+      \begin{RTL}
+      \begin{block}{\faListUl\ بخش دوم}
+        \tableofcontents[sections={5-8}]
+      \end{block}
+      \end{RTL}
+    \end{column}
+    \hfill
+    \begin{column}{0.48\textwidth}
+      \begin{RTL}
+      \begin{block}{\faListUl\ بخش اول}
+        \tableofcontents[sections={1-4}]
+      \end{block}
+      \end{RTL}
+    \end{column}
+  \end{columns}
+  \end{LTR}
+\end{frame}
+
+% ============================================================
+\section{معرفی مقاله}
+% ============================================================
+
+\begin{frame}{اطلاعات کتاب‌شناختی}
+  \begin{LTR}
+  \begin{columns}[T]
+    \begin{column}{0.60\textwidth}
+      \begin{RTL}
+      \begin{itemize}
+        \item \keyword{نویسندگان:} \lr{Thomas J. Sargent} و \lr{Neil Wallace}
+        \item \keyword{عنوان:} \lr{Rational Expectations and the Theory of Economic Policy}
+        \item \keyword{منبع:} فصل ۳۱ در کتاب
+        \item \keyword{انتشار اولیه:} \lr{Working Paper No. 29} (۱۹۷۴)
+        \item \keyword{انتشار رسمی:} \lr{Journal of Monetary Economics}، ۱۹۷۶
+      \end{itemize}
+      \end{RTL}
+    \end{column}
+    \hfill
+    \begin{column}{0.35\textwidth}
+      \begin{RTL}
+      \begin{block}{}
+        \centering
+        {\color{MainBlue}\Huge\faBookOpen}\\[0.4cm]
+        {\footnotesize\lr{University of Minnesota Press}}\\[0.2cm]
+        {\small ۱۹۸۱}
+      \end{block}
+      \end{RTL}
+    \end{column}
+  \end{columns}
+  \end{LTR}
+\end{frame}
+
+\begin{frame}{جایگاه تاریخی مقاله}
+  \begin{block}{سه ستون انقلاب انتظارات عقلایی}
+    \begin{enumerate}
+      \item \lr{Lucas (1972): Expectations and the Neutrality of Money}
+      \item \highlight{\lr{Sargent \& Wallace (1976/1981)}:} قضیه بی‌اثری سیاست
+      \item \lr{Lucas (1976): Econometric Policy Evaluation: A Critique}
+    \end{enumerate}
+  \end{block}
+  \vspace{0.4cm}
+  \begin{LTR}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{RTL}
+      \begin{alertblock}{زمینه تاریخی}
+        \centering
+        رکود تورمی دهه ۱۹۷۰
+      \end{alertblock}
+      \end{RTL}
+    \end{column}
+    \hfill
+    \begin{column}{0.48\textwidth}
+      \begin{RTL}
+      \begin{exampleblock}{پیامد}
+        \centering
+        چالش با سیاست‌های تثبیتی کینزی
+      \end{exampleblock}
+      \end{RTL}
+    \end{column}
+  \end{columns}
+  \end{LTR}
+\end{frame}
+
+\begin{frame}{پرسش اصلی مقاله}
+  \begin{block}{پرسش محوری}
+    \centering
+    \large
+    آیا دولت می‌تواند با استفاده از \highlight{سیاست‌های پولی نظام‌مند}، متغیرهای واقعی اقتصاد مانند تولید و بیکاری را به‌طور دائمی تحت تأثیر قرار دهد؟
+  \end{block}
+  \vspace{0.5cm}
+  \begin{alertblock}{پاسخ مقاله}
+    \centering
+    \large
+    \important{خیر.} تحت فرض انتظارات عقلایی، هر سیاست نظام‌مند و قابل پیش‌بینی، بی‌اثر است.
+    \vspace{0.2cm}
+
+    این همان \important{قضیه بی‌اثری سیاست} است.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{ساختار منطقی مقاله}
+  \begin{center}
+    \begin{tikzpicture}[node distance=0.6cm]
+      \node[flowchartbox] (a) {\begin{RTL}\textbf{فرض:} عوامل اقتصادی انتظارات عقلایی دارند\end{RTL}};
+      \node[flowchartbox, below=of a] (b) {\begin{RTL}\textbf{نتیجه ۱:} تنها خطاهای پیش‌بینی بر تولید اثر دارند\end{RTL}};
+      \node[flowchartbox, below=of b] (c) {\begin{RTL}\textbf{نتیجه ۲:} سیاست نظام‌مند قابل پیش‌بینی، خطای پیش‌بینی ایجاد نمی‌کند\end{RTL}};
+      \node[flowchartbox, below=of c, fill=AccentOrange!20, draw=AccentOrange] (d) {\begin{RTL}\textbf{نتیجه نهایی:} سیاست نظام‌مند بی‌اثر است\end{RTL}};
+
+      \draw[flowchartarrow] (a) -- (b);
+      \draw[flowchartarrow] (b) -- (c);
+      \draw[flowchartarrow] (c) -- (d);
+    \end{tikzpicture}
+  \end{center}
+\end{frame}
+
+% ============================================================
+\section{فرض کلیدی: انتظارات عقلایی}
+% ============================================================
+
+\begin{frame}{انتظارات عقلایی: تعریف}
+  \begin{block}{تعریف جان ماث (\lr{John Muth, 1961})}
+    انتظارات عقلایی یعنی انتظارات ذهنی عوامل اقتصادی با \highlight{پیش‌بینی ریاضی بهینه} منطبق است.
+  \end{block}
+  \vspace{0.3cm}
+  \begin{LTR}
+  \begin{columns}[T]
+    \begin{column}{0.52\textwidth}
+      \begin{RTL}
+      \begin{itemize}
+        \item \faCheckCircle\ مردم \keyword{همه اطلاعات} را پردازش می‌کنند
+        \item \faCheckCircle\ \keyword{ساختار مدل} را می‌شناسند
+        \item \faCheckCircle\ \keyword{قواعد سیاستی} را می‌شناسند
+      \end{itemize}
+      \end{RTL}
+    \end{column}
+    \hfill
+    \begin{column}{0.44\textwidth}
+      \begin{RTL}
+      \begin{exampleblock}{نتیجه}
+        انتظارات \highlight{خطای سیستماتیک} ندارد
+      \end{exampleblock}
+      \end{RTL}
+    \end{column}
+  \end{columns}
+  \end{LTR}
+\end{frame}
+
+\begin{frame}{تفاوت با انتظارات تطبیقی}
+  \begin{center}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{ccc}
+      \toprule
+      \textbf{ویژگی} & \textbf{\textcolor{AlertRed}{انتظارات تطبیقی}} & \textbf{\textcolor{SuccessGreen}{انتظارات عقلایی}} \\
+      \midrule
+      جهت‌گیری        & گذشته‌نگر  & آینده‌نگر          \\
+      اطلاعات        & فقط گذشته & همه اطلاعات موجود \\
+      خطای سیستماتیک & دارد      & ندارد             \\
+      سرعت یادگیری   & کند       & فوری              \\
+      مبنای نظری     & تجربی     & بهینه‌سازی         \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{frame}
+
+\begin{frame}{پیامد انتظارات عقلایی برای سیاست}
+  \begin{center}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{lcc}
+      \toprule
+      \textbf{نوع سیاست} & \textbf{آیا پیش‌بینی می‌شود؟} & \textbf{اثر بر تولید} \\
+      \midrule
+      قاعده نظام‌مند & \faCheckCircle & \important{صفر} \\
+      شوک تصادفی    & \faTimesCircle & موقتی و بی‌فایده \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  \vspace{0.5cm}
+  \begin{alertblock}{نکته کلیدی}
+    تنها بخش \important{غیرقابل پیش‌بینی} سیاست می‌تواند اثر واقعی داشته باشد.
+  \end{alertblock}
+\end{frame}
+
+% ============================================================
+\section{ساختار مدل ریاضی}
+% ============================================================
+
+\begin{frame}{معادله عرضه کل}
+  \begin{block}{منحنی فیلیپس با انتظارات عقلایی}
+    \centering
+    \large
+    \[
+      y_t = \bar{y} + \alpha (p_t - E_{t-1}p_t) + \varepsilon_t
+    \]
+  \end{block}
+  \vspace{0.2cm}
+  \begin{LTR}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{RTL}
+      \begin{itemize}
+        \item $y_t$: تولید واقعی
+        \item $\bar{y}$: تولید طبیعی
+        \item $p_t$: سطح قیمت
+      \end{itemize}
+      \end{RTL}
+    \end{column}
+    \hfill
+    \begin{column}{0.48\textwidth}
+      \begin{RTL}
+      \begin{itemize}
+        \item $E_{t-1}p_t$: انتظار قیمت
+        \item $\varepsilon_t$: شوک عرضه
+        \item $\alpha > 0$: حساسیت
+      \end{itemize}
+      \end{RTL}
+    \end{column}
+  \end{columns}
+  \end{LTR}
+\end{frame}
+
+\begin{frame}{تفسیر اقتصادی معادله عرضه}
+  \begin{center}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{lc}
+      \toprule
+      \textbf{وضعیت}     & \textbf{اثر بر تولید} \\
+      \midrule
+      $p_t > E_{t-1}p_t$ & \textcolor{SuccessGreen}{افزایش تولید} \\
+      $p_t = E_{t-1}p_t$ & تولید در سطح طبیعی \\
+      $p_t < E_{t-1}p_t$ & \textcolor{AlertRed}{کاهش تولید} \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  \vspace{0.5cm}
+  \begin{alertblock}{نکته کلیدی}
+    فقط \important{خطای پیش‌بینی قیمت} اثر واقعی دارد.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{معادله تقاضای کل}
+  \begin{block}{معادله مبادله‌ای}
+    \centering
+    \large
+    \[
+      m_t + v_t = p_t + y_t
+    \]
+  \end{block}
+  \vspace{0.3cm}
+  \begin{LTR}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{RTL}
+      \begin{itemize}
+        \item $m_t$: عرضه پول
+        \item $v_t$: شوک سرعت گردش
+      \end{itemize}
+      \end{RTL}
+    \end{column}
+    \hfill
+    \begin{column}{0.48\textwidth}
+      \begin{RTL}
+      \begin{itemize}
+        \item $p_t$: سطح قیمت
+        \item $y_t$: تولید واقعی
+      \end{itemize}
+      \end{RTL}
+    \end{column}
+  \end{columns}
+  \end{LTR}
+  \vspace{0.3cm}
+  \begin{exampleblock}{حل برای قیمت}
+    \centering
+    $p_t = m_t + v_t - y_t$
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{قاعده سیاست پولی}
+  \begin{block}{قاعده بازخوردی دولت}
+    \centering
+    \large
+    \[
+      m_t = \mu_0 + \mu_1 y_{t-1} + \mu_2 m_{t-1} + u_t
+    \]
+  \end{block}
+  \vspace{0.3cm}
+  \begin{itemize}
+    \item $\mu_0, \mu_1, \mu_2$: \keyword{پارامترهای سیاست}
+    \item $u_t$: \highlight{شوک غیرقابل پیش‌بینی} سیاست
+  \end{itemize}
+  \vspace{0.3cm}
+  \begin{alertblock}{هدف تحلیل}
+    آیا تغییر $\mu_1$ می‌تواند تولید واقعی را تحت تأثیر قرار دهد؟
+  \end{alertblock}
+\end{frame}
+
+% ============================================================
+\section{حل کامل مدل}
+% ============================================================
+
+\begin{frame}{مرحله ۱: قیمت تعادلی}
+  با جایگذاری معادله عرضه در تقاضا:
+  \[
+    p_t = m_t + v_t - \bar{y} - \alpha(p_t - E_{t-1}p_t) - \varepsilon_t
+  \]
+  \vspace{0.3cm}
+  با مرتب کردن:
+  \[
+    p_t (1 + \alpha) = m_t + v_t - \bar{y} + \alpha E_{t-1}p_t - \varepsilon_t
+  \]
+  \vspace{0.3cm}
+  \begin{block}{قیمت تعادلی}
+    \centering
+    \[
+      p_t = \frac{1}{1+\alpha}\left(m_t + v_t - \bar{y} + \alpha E_{t-1}p_t - \varepsilon_t\right)
+    \]
+  \end{block}
+\end{frame}
+
+\begin{frame}{مرحله ۲: محاسبه انتظار قیمت}
+  \begin{block}{انتظار عقلایی قیمت}
+    \[
+      E_{t-1}p_t = \frac{1}{1+\alpha}\left(E_{t-1}m_t + E_{t-1}v_t - \bar{y} + \alpha E_{t-1}p_t - E_{t-1}\varepsilon_t\right)
+    \]
+  \end{block}
+  \vspace{0.3cm}
+  با فرض:
+  \[
+    E_{t-1}v_t = 0, \quad E_{t-1}\varepsilon_t = 0
+  \]
+  و از قاعده سیاست:
+  \[
+    E_{t-1}m_t = \mu_0 + \mu_1 y_{t-1} + \mu_2 m_{t-1}
+  \]
+\end{frame}
+
+\begin{frame}{مرحله ۳: خطای پیش‌بینی قیمت}
+  \begin{block}{تفریق دو معادله}
+    \[
+      p_t - E_{t-1}p_t = \frac{1}{1+\alpha}\left[(m_t - E_{t-1}m_t) + v_t - \varepsilon_t\right]
+    \]
+  \end{block}
+  \vspace{0.3cm}
+  و چون:
+  \[
+    m_t - E_{t-1}m_t = u_t
+  \]
+  \vspace{0.3cm}
+  \begin{alertblock}{خطای پیش‌بینی قیمت}
+    \centering
+    \[
+      p_t - E_{t-1}p_t = \frac{1}{1+\alpha}(u_t + v_t - \varepsilon_t)
+    \]
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{مرحله ۴: معادله نهایی تولید}
+  \[
+    y_t = \bar{y} + \alpha \cdot \frac{1}{1+\alpha}(u_t + v_t - \varepsilon_t) + \varepsilon_t
+  \]
+  \vspace{0.5cm}
+  \begin{block}{معادله نهایی}
+    \centering
+    \Large
+    \[
+      \boxed{y_t = \bar{y} + \frac{\alpha}{1+\alpha}u_t + \frac{\alpha}{1+\alpha}v_t + \frac{1}{1+\alpha}\varepsilon_t}
+    \]
+  \end{block}
+\end{frame}
+
+% ============================================================
+\section{قضیه بی‌اثری سیاست}
+% ============================================================
+
+\begin{frame}{حذف پارامترهای سیاست}
+  \begin{block}{معادله نهایی تولید}
+    \[
+      y_t = \bar{y} + \frac{\alpha}{1+\alpha}u_t + \frac{\alpha}{1+\alpha}v_t + \frac{1}{1+\alpha}\varepsilon_t
+    \]
+  \end{block}
+  \vspace{0.3cm}
+  \begin{alertblock}{مشاهده کلیدی}
+    \centering
+    \large
+    پارامترهای $\mu_0, \mu_1, \mu_2$ به‌طور کامل \important{حذف شده‌اند!}
+  \end{alertblock}
+  \vspace{0.3cm}
+  \begin{itemize}
+    \item توزیع $y_t$ \keyword{هیچ وابستگی} به قاعده سیاستی ندارد
+    \item تغییر $\mu_1$ \important{هیچ اثری} بر تولید ندارد
+    \item تنها \highlight{شوک‌های غیرقابل پیش‌بینی} اثر دارند
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{تحلیل واریانس تولید}
+  \begin{block}{واریانس تولید}
+    \[
+      \text{Var}(y_t) = \left(\frac{\alpha}{1+\alpha}\right)^2 (\sigma_u^2 + \sigma_v^2) + \left(\frac{1}{1+\alpha}\right)^2 \sigma_\varepsilon^2
+    \]
+  \end{block}
+  \vspace{0.3cm}
+  \begin{LTR}
+  \begin{columns}[T]
+    \begin{column}{0.32\textwidth}
+      \begin{RTL}
+      \centering
+      $\sigma_u^2$\\[0.2cm]
+      \small شوک سیاست
+      \end{RTL}
+    \end{column}
+    \hfill
+    \begin{column}{0.32\textwidth}
+      \begin{RTL}
+      \centering
+      $\sigma_v^2$\\[0.2cm]
+      \small شوک سرعت
+      \end{RTL}
+    \end{column}
+    \hfill
+    \begin{column}{0.32\textwidth}
+      \begin{RTL}
+      \centering
+      $\sigma_\varepsilon^2$\\[0.2cm]
+      \small شوک عرضه
+      \end{RTL}
+    \end{column}
+  \end{columns}
+  \end{LTR}
+  \vspace{0.3cm}
+  \begin{alertblock}{نکته}
+    هیچ‌کدام از پارامترهای سیاست در واریانس ظاهر نمی‌شوند.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{تفسیر شهودی}
+  \begin{center}
+    \begin{tikzpicture}[node distance=0.35cm]
+      \node[stepbox] (s1) {\begin{RTL}\textbf{۱.} مردم قاعده سیاستی $\mu_1$ را می‌دانند\end{RTL}};
+      \node[stepbox, below=of s1] (s2) {\begin{RTL}\textbf{۲.} آن را در انتظارات قیمتی $E_{t-1}p_t$ وارد می‌کنند\end{RTL}};
+      \node[stepbox, below=of s2] (s3) {\begin{RTL}\textbf{۳.} دولت پول را افزایش می‌دهد، اما مردم قبلاً پیش‌بینی کرده‌اند\end{RTL}};
+      \node[stepbox, below=of s3] (s4) {\begin{RTL}\textbf{۴.} خطای پیش‌بینی $p_t - E_{t-1}p_t$ تغییر نمی‌کند\end{RTL}};
+      \node[stepbox, below=of s4, fill=AccentOrange!20, draw=AccentOrange] (s5) {\begin{RTL}\textbf{۵.} تولید واقعی تکان نمی‌خورد\end{RTL}};
+
+      \foreach \i/\j in {s1/s2, s2/s3, s3/s4, s4/s5}
+        \draw[flowchartarrow] (\i) -- (\j);
+    \end{tikzpicture}
+  \end{center}
+\end{frame}
+
+\begin{frame}{پیام‌های سیاستی}
+  \begin{LTR}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{RTL}
+      \begin{alertblock}{اگر دولت...}
+        \begin{itemize}
+          \item قاعده پولی را تغییر دهد
+          \item سیاست را نظام‌مند کند
+          \item شوک وارد کند
+        \end{itemize}
+      \end{alertblock}
+      \end{RTL}
+    \end{column}
+    \hfill
+    \begin{column}{0.48\textwidth}
+      \begin{RTL}
+      \begin{exampleblock}{آنگاه...}
+        \begin{itemize}
+          \item تولید تغییر نمی‌کند
+          \item فقط تورم ایجاد می‌شود
+          \item نوسان موقتی رخ می‌دهد
+        \end{itemize}
+      \end{exampleblock}
+      \end{RTL}
+    \end{column}
+  \end{columns}
+  \end{LTR}
+  \vspace{0.4cm}
+  \begin{block}{پیام اصلی}
+    \centering
+    \large
+    \important{سیاست تثبیتی نظام‌مند بی‌اثر است.}
+  \end{block}
+\end{frame}
+
+% ============================================================
+\section{اهمیت و نقدها}
+% ============================================================
+
+\begin{frame}{اهمیت و جایگاه}
+  \begin{block}{میراث مقاله}
+    \begin{itemize}
+      \item ستون \keyword{مکتب کلاسیک جدید}
+      \item همراه با \highlight{نقد لوکاس} (۱۹۷۶)
+      \item چالشی بنیادین با \important{سیاست‌های تثبیتی کینزی}
+    \end{itemize}
+  \end{block}
+  \vspace{0.3cm}
+  \begin{exampleblock}{زمینه‌ساز تحولات بعدی}
+    \begin{itemize}
+      \item هدف‌گذاری تورم
+      \item استقلال بانک مرکزی
+      \item قاعده تیلور
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{نقدهای وارد بر مقاله}
+  \begin{LTR}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{RTL}
+      \begin{alertblock}{\faExclamationTriangle\ نقدهای نظری}
+        \begin{itemize}
+          \item چسبندگی قیمت و دستمزد
+          \item اطلاعات نامتقارن
+          \item مدل‌های کینزی جدید
+        \end{itemize}
+      \end{alertblock}
+      \end{RTL}
+    \end{column}
+    \hfill
+    \begin{column}{0.48\textwidth}
+      \begin{RTL}
+      \begin{alertblock}{\faExclamationTriangle\ نقدهای تجربی}
+        \begin{itemize}
+          \item شواهد اثر سیاست نظام‌مند
+          \item نوسانات واقعی اقتصاد
+          \item نقش انتظارات غیرعقلایی
+        \end{itemize}
+      \end{alertblock}
+      \end{RTL}
+    \end{column}
+  \end{columns}
+  \end{LTR}
+  \vspace{0.3cm}
+  \begin{block}{جمع‌بندی}
+    \centering
+    با وجود نقدها، این مقاله نقطه عطفی در تاریخ اقتصاد کلان است.
+  \end{block}
+\end{frame}
+
+% ============================================================
+\section{جمع‌بندی}
+% ============================================================
+
+\begin{frame}{جمع‌بندی نهایی}
+  \begin{block}{پیام اصلی}
+    \centering
+    \large
+    تحت فرض انتظارات عقلایی، \important{سیاست پولی نظام‌مند نمی‌تواند متغیرهای واقعی را تحت تأثیر قرار دهد.}
+  \end{block}
+  \vspace{0.5cm}
+  \begin{LTR}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{RTL}
+      \begin{itemize}
+        \item \keyword{مکانیسم:} مردم قاعده را می‌دانند
+        \item \keyword{نتیجه:} پارامترها حذف می‌شوند
+      \end{itemize}
+      \end{RTL}
+    \end{column}
+    \hfill
+    \begin{column}{0.48\textwidth}
+      \begin{RTL}
+      \begin{itemize}
+        \item \keyword{پیام:} فقط شوک‌های غیرمنتظره اثر دارند
+        \item \keyword{میراث:} کلاسیک جدید
+      \end{itemize}
+      \end{RTL}
+    \end{column}
+  \end{columns}
+  \end{LTR}
+\end{frame}
+
+\begin{frame}[standout]
+  \centering
+  \Huge
+  \textcolor{white}{پایان مقاله اول}
+  \vspace{0.5cm}
+
+  \large
+  \textcolor{white}{آماده برای مقاله دوم:}\\
+  \textcolor{AccentOrange}{\lr{\textbf{After Keynesian Macroeconomics}}}
+\end{frame}
+
+\end{document}
