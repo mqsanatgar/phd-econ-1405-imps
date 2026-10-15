@@ -1,0 +1,1278 @@
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.10.1)  15 OCT 2026 15:53
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**all.tex
+(./all.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-09-09>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count273
+\c@section=\count274
+\c@subsection=\count275
+\c@subsubsection=\count276
+\c@paragraph=\count277
+\c@subparagraph=\count278
+\c@figure=\count279
+\c@table=\count280
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen150
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2026/05/19 v2.18d AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen151
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen152
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count281
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count282
+\leftroot@=\count283
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count284
+\DOTSCASE@=\count285
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen153
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count286
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count287
+\dotsspace@=\muskip17
+\c@parentequation=\count288
+\dspbrk@lvl=\count289
+\tag@help=\toks18
+\row@=\count290
+\column@=\count291
+\maxfields@=\count292
+\andhelp@=\toks19
+\eqnshift@=\dimen154
+\alignsep@=\dimen155
+\tagshift@=\dimen156
+\tagwidth@=\dimen157
+\totwidth@=\dimen158
+\lineht@=\dimen159
+\@envbody=\toks20
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2965.
+LaTeX Info: Redefining \] on input line 2966.
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks22
+\thm@bodyfont=\toks23
+\thm@headfont=\toks24
+\thm@notefont=\toks25
+\thm@headpunct=\toks26
+\thm@preskip=\skip54
+\thm@postskip=\skip55
+\thm@headsep=\skip56
+\dth@everypar=\toks27
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2026-05-17 v1.15 key=value parser (DPC)
+\KV@toks@=\toks28
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count293
+\Gm@cntv=\count294
+\c@Gm@tempcnt=\count295
+\Gm@bindingoffset=\dimen160
+\Gm@wd@mp=\dimen161
+\Gm@odd@mp=\dimen162
+\Gm@even@mp=\dimen163
+\Gm@layoutwidth=\dimen164
+\Gm@layoutheight=\dimen165
+\Gm@layouthoffset=\dimen166
+\Gm@layoutvoffset=\dimen167
+\Gm@dimlist=\toks29
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip57
+\enit@outerparindent=\dimen168
+\enit@toks=\toks30
+\enit@inbox=\box55
+\enit@count@id=\count296
+\enitdp@description=\count297
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 274.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2025/11/01 v5.0p Graphics/color driver for xetex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2026-05-17 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2026-05-17 v1.4h Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 106.
+)
+\Gin@req@height=\dimen169
+\Gin@req@width=\dimen170
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip58
+\f@nch@offset@elh=\skip59
+\f@nch@offset@erh=\skip60
+\f@nch@offset@olh=\skip61
+\f@nch@offset@orh=\skip62
+\f@nch@offset@elf=\skip63
+\f@nch@offset@erf=\skip64
+\f@nch@offset@olf=\skip65
+\f@nch@offset@orf=\skip66
+\f@nch@height=\skip67
+\f@nch@footalignment=\skip68
+\f@nch@widthL=\skip69
+\f@nch@widthC=\skip70
+\f@nch@widthR=\skip71
+\@temptokenb=\toks31
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box56
+\beforetitleunit=\skip72
+\aftertitleunit=\skip73
+\ttl@plus=\dimen171
+\ttl@minus=\dimen172
+\ttl@toksa=\toks32
+\titlewidth=\dimen173
+\titlewidthlast=\dimen174
+\titlewidthfirst=\dimen175
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+Package: fontspec 2026/08/11 v2.9h Font selection for XeLaTeX and LuaLaTeX
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2026/08/11 v2.9h Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count298
+\l__fontspec_language_int=\count299
+\l__fontspec_strnum_int=\count300
+\l__fontspec_tmp_int=\count301
+\l__fontspec_tmpa_int=\count302
+\l__fontspec_tmpb_int=\count303
+\l__fontspec_tmpc_int=\count304
+\l__fontspec_em_int=\count305
+\l__fontspec_emdef_int=\count306
+\l__fontspec_strong_int=\count307
+\l__fontspec_strongdef_int=\count308
+\l__fontspec_tmpa_dim=\dimen176
+\l__fontspec_tmpb_dim=\dimen177
+\l__fontspec_tmpc_dim=\dimen178
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xepersian/xepersian.sty
+Package: xepersian 2026/01/01 v26.01.01 (Release Iran) Persian typesetting in X
+eLaTeX
+
+****************************************************
+* 
+* xepersian package (Persian for LaTeX format in XeTeX and LuaTeX engines)
+* 
+* Description: A convenient interface for typesetting Persian and
+English documents with LaTeX format in XeTeX and LuaTeX engines.
+* 
+* Copyright (c) 2008--2026 Vafa Khalighi
+* Copyright (c) 2018--2020 bidi-tex GitHub Organization
+* 
+* v26.01.01 (Release Iran), 2026/01/01
+* 
+* License: LaTeX Project Public License, version
+* 1.3c or higher (your choice)
+* 
+* Location on CTAN: /macros/unicodetex/latex/xepersian
+* 
+* Issue tracker: https://github.com/xepersian/xepersian/issues
+* 
+* Primary author of xepersian package: Vafa Khalighi.
+* 
+****************************************************
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xepersian/unicode-persiancal.sty
+Package: unicode-persiancal 2025/01/01 v0.3 Unicode Persian calendar
+\XePersian@i=\count309
+\XePersian@y=\count310
+\XePersian@m=\count311
+\XePersian@d=\count312
+\XePersian@latini=\count313
+\XePersian@persiani=\count314
+\XePersian@latinii=\count315
+\XePersian@persianii=\count316
+\XePersian@latiniii=\count317
+\XePersian@persianiii=\count318
+\XePersian@latiniv=\count319
+\XePersian@persianiv=\count320
+\XePersian@latinv=\count321
+\XePersian@persianv=\count322
+\XePersian@latinvi=\count323
+\XePersian@persianvi=\count324
+\XePersian@latinvii=\count325
+\XePersian@persianvii=\count326
+\XePersian@latinviii=\count327
+\XePersian@persianviii=\count328
+\XePersian@latinix=\count329
+\XePersian@persianix=\count330
+\XePersian@latinx=\count331
+\XePersian@persianx=\count332
+\XePersian@latinxi=\count333
+\XePersian@persianxi=\count334
+\XePersian@latinxii=\count335
+\XePersian@persianxii=\count336
+\XePersian@persianxiii=\count337
+\XePersian@temp=\count338
+\XePersian@temptwo=\count339
+\XePersian@tempthree=\count340
+\XePersian@yModHundred=\count341
+\XePersian@thirtytwo=\count342
+\XePersian@dn=\count343
+\XePersian@sn=\count344
+\XePersian@mminusone=\count345
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xepersian/unicode-persianmath.sty
+Package: unicode-persianmath 2026/01/01 v1.2.6 Unicode Persian math
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/bidi/bidi.sty
+Package: bidi 2026/01/08 v26.01.08 (Release Iran) Bidirectional typesetting in 
+plain TeX and LaTeX
+
+****************************************************
+* 
+* bidi package (Bidirectional typesetting with
+* plain TeX and LaTeX formats in XeTeX and LuaTeX engines)
+* 
+* Description: A convenient interface for
+* typesetting bidirectional texts in plain TeX
+* and LaTeX. The package includes adaptations
+* for use with many other commonly-used packages.
+* 
+* Copyright (c) 2007--2026 Vafa Khalighi
+* Copyright (c) 2018--2020 bidi-tex GitHub organization
+* 
+* v26.01.08 (Release Iran), 2026/01/08
+* 
+* License: LaTeX Project Public License, version
+* 1.3c or higher (your choice)
+* 
+* Location on CTAN: /macros/unicodetex/generic/bidi
+* 
+* Issue tracker: https://github.com/xepersian/bidi/issues
+* 
+* Primary author of bidi package: Vafa Khalighi.
+* 
+****************************************************
+(/usr/local/texlive/2026/texmf-dist/tex/latex/bidi/biditools.sty
+Package: biditools 2025/12/19 v2.9 Programming tools for bidi package
+\@bidi@envbody=\toks33
+\@bidi@emptytoks=\toks34
+\bidi@poscount=\count346
+\bidi@tempcountb=\count347
+\bidi@temptoksa=\toks35
+\bidi@temptoksb=\toks36
+\bidi@dummies=\count348
+\bidi@are@these@correct=\toks37
+\bidi@toks@lista=\toks38
+\bidi@toks@listb=\toks39
+\bidi@stack@length=\count349
+\bidi@empty@stack=\toks40
+\bidi@looprepeat@depth=\count350
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/zref/zref-abspage.sty
+Package: zref-abspage 2026-09-16 v2.38 Module abspage for zref (HO)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2026-09-16 v2.38 Module base for zref (HO)
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+Package zref Info: New property list: main on input line 772.
+Package zref Info: New property: default on input line 773.
+Package zref Info: New property: page on input line 774.
+)
+\c@abspage=\count351
+Package zref Info: New property: abspage on input line 68.
+)
+\@bidi@copyins@=\insert252
+\bidi@typesethour=\count352
+\bidi@typesetminute=\count353
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/bidi/latex-xetex-bidi.def
+File: latex-xetex-bidi.def 2025/12/19 v1.5.6 bidi adaptations for `latex.ltx' f
+or XeTeX engine
+\bidi@n@everypar=\toks41
+LaTeX Info: Redefining \centerline on input line 317.
+LaTeX Info: Redefining \leftline on input line 326.
+LaTeX Info: Redefining \rightline on input line 327.
+LaTeX Info: Redefining \underline on input line 335.
+\bidi@column@check@number=\count354
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/bidi/footnote-xetex-bidi.def
+File: footnote-xetex-bidi.def 2025/09/30 v1.6 bidi footnote macros for XeTeX en
+gine
+\c@footdir@label=\count355
+\footdir@toks=\toks42
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/bidi/article-xetex-bidi.def
+File: article-xetex-bidi.def 2025/09/30 v1.2 bidi adaptations for standard arti
+cle class for XeTeX engine
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/bidi/amsmath-xetex-bidi.def
+File: amsmath-xetex-bidi.def 2020/05/16 v1.2 bidi adaptations for amsmath packa
+ge for XeTeX engine
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/bidi/amstext-xetex-bidi.def
+File: amstext-xetex-bidi.def 2016/09/12 v0.2 bidi adaptations for amstext packa
+ge for XeTeX engine
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/bidi/amsthm-xetex-bidi.def
+File: amsthm-xetex-bidi.def 2010/07/25 v0.1 bidi adaptations for amsthm package
+ for XeTeX engine
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/bidi/color-xetex-bidi.def
+File: color-xetex-bidi.def 2013/04/08 v0.2 bidi adaptations for color package f
+or XeTeX engine
+LaTeX Info: Redefining \color on input line 50.
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/bidi/fancyhdr-xetex-bidi.def
+File: fancyhdr-xetex-bidi.def 2025/09/03 v1.0 bidi adaptations for fancyhdr pac
+kage for XeTeX engine
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/bidi/geometry-xetex-bidi.def
+File: geometry-xetex-bidi.def 2017/01/14 v0.2 bidi adaptations for geometry pac
+kage for XeTeX engine
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/bidi/graphicx-xetex-bidi.def
+File: graphicx-xetex-bidi.def 2017/06/17 v0.5 bidi adaptations for graphicx pac
+kage for XeTeX engine
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/bidi/titlesec-xetex-bidi.def
+File: titlesec-xetex-bidi.def 2010/07/25 v0.1 bidi adaptations for titlesec pac
+kage for XeTeX engine
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/bidi/xcolor-xetex-bidi.def
+File: xcolor-xetex-bidi.def 2022/06/13 v0.3 bidi adaptations for xcolor package
+ for XeTeX engine
+LaTeX Info: Redefining \color on input line 49.
+LaTeX Info: Redefining \bidicolor on input line 92.
+))
+\bidi@digits=\count356
+\bidi@digits@charclass=\XeTeXcharclass1
+\bidi@sepmark@charclass=\XeTeXcharclass2
+)
+\xepersian@tcl=\count357
+\xepersian@ilg=\dimen179
+\xepersian@strutilg=\dimen180
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xepersian/footnote-xetex-bidi-xet
+ex-xepersian.def
+File: footnote-xetex-bidi-xetex-xepersian.def 2017/08/09 v0.6 xepersian adaptat
+ions for footnotes for XeTeX engine
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xepersian/article-xetex-xepersian
+.def
+File: article-xetex-xepersian.def 2010/07/25 v0.2 xepersian adaptations for sta
+ndard article class for XeTeX engine
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xepersian/enumitem-xetex-xepersia
+n.def
+File: enumitem-xetex-xepersian.def 2017/09/06 v0.1 xepersian adaptations for en
+umitem package for XeTeX engine
+)
+\xepersian@toks=\toks43
+)
+
+Package fontspec Info: 
+(fontspec)             Font family 'lmroman10-regular(0)' created for font
+(fontspec)             'lmroman10-regular' with options
+(fontspec)             [Ligatures=TeX,Path,BoldFont={lmroman10-bold},BoldItalic
+Font={lmroman10-bolditalic},ItalicFont={lmroman10-italic},SmallCapsFont={lmroma
+ncaps10-regular},SlantedFont={lmromanslant10-regular},BoldSlantedFont={lmromans
+lant10-bold}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[lmroman10-regular]/OT:script=latn;language=dflt;map
+ping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt
+;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[lmroman10-bold]/OT:script=latn;language=dflt;mappin
+g=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt
+;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[lmroman10-italic]/OT:script=latn;language=dflt;mapp
+ing=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt
+;mapping=tex-text;"
+(fontspec)             - 'slanted' (m/sl) with NFSS spec.:
+(fontspec)             <->"[lmromanslant10-regular]/OT:script=latn;language=dfl
+t;mapping=tex-text;"
+(fontspec)             - 'slanted small caps'  (m/scsl) with NFSS spec.:
+(fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt
+;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"[lmroman10-bolditalic]/OT:script=latn;language=dflt;
+mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt
+;mapping=tex-text;"
+(fontspec)             - 'bold slanted' (b/sl) with NFSS spec.:
+(fontspec)             <->"[lmromanslant10-bold]/OT:script=latn;language=dflt;m
+apping=tex-text;"
+(fontspec)             - 'bold slanted small caps'  (b/scsl) with NFSS spec.:
+(fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt
+;mapping=tex-text;"
+
+
+Package fontspec Info: 
+(fontspec)             XB Niloofar scale = 1.05.
+
+
+Package fontspec Info: 
+(fontspec)             XB Niloofar scale = 1.05.
+
+
+Package fontspec Info: 
+(fontspec)             XB Niloofar/B scale = 1.05.
+
+
+Package fontspec Info: 
+(fontspec)             XB Niloofar/I scale = 1.05.
+
+
+Package fontspec Info: 
+(fontspec)             XB Niloofar/BI scale = 1.05.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'XBNiloofar(0)' created for font 'XB
+(fontspec)             Niloofar' with options
+(fontspec)             [RawFeature={script=arab},Ligatures=PersianTeX,Scale=1.0
+5].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->s*[1.05]"XB
+(fontspec)             Niloofar/OT:script=latn;language=dflt;script=arab;mappin
+g=persian-tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->s*[1.05]"XB
+(fontspec)             Niloofar/B/OT:script=latn;language=dflt;script=arab;mapp
+ing=persian-tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->s*[1.05]"XB
+(fontspec)             Niloofar/I/OT:script=latn;language=dflt;script=arab;mapp
+ing=persian-tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->s*[1.05]"XB
+(fontspec)             Niloofar/BI/OT:script=latn;language=dflt;script=arab;map
+ping=persian-tex-text;"
+
+LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/m/n' will be
+(Font)              scaled to size 12.60004pt on input line 21.
+
+Package fontspec Info: 
+(fontspec)             Times New Roman scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             Times New Roman scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             Times New Roman/B scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             Times New Roman/I scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             Times New Roman/BI scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'TimesNewRoman(0)' created for font 'Times
+(fontspec)             New Roman' with options [Ligatures=TeX,Scale=1].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->s*[1]"Times New
+(fontspec)             Roman/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->s*[1]"Times New
+(fontspec)             Roman/B/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->s*[1]"Times New
+(fontspec)             Roman/I/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->s*[1]"Times
+(fontspec)             New Roman/BI/OT:language=dflt;mapping=tex-text;"
+
+LaTeX Info: Redefining \latinfont on input line 23.
+
+Package fontspec Info: 
+(fontspec)             Yas scale = 1.05.
+
+
+Package fontspec Info: 
+(fontspec)             Yas scale = 1.05.
+
+
+Package fontspec Info: 
+(fontspec)             Yas/B scale = 1.05.
+
+
+Package fontspec Info: 
+(fontspec)             Yas/I scale = 1.05.
+
+
+Package fontspec Info: 
+(fontspec)             Yas/BI scale = 1.05.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'Yas(0)' created for font 'Yas' with
+(fontspec)             options [Ligatures=PersianTeX,Scale=1.05].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1.05]"Yas/OT:script=latn;language=dflt;mapping=per
+sian-tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.05]"Yas/B/OT:script=latn;language=dflt;mapping=p
+ersian-tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1.05]"Yas/I/OT:script=latn;language=dflt;mapping=p
+ersian-tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1.05]"Yas/BI/OT:script=latn;language=dflt;mapping=
+persian-tex-text;"
+
+
+Package fontspec Info: 
+(fontspec)             Yas scale = 1.05.
+
+
+Package fontspec Info: 
+(fontspec)             Yas scale = 1.05.
+
+
+Package fontspec Info: 
+(fontspec)             Yas/B scale = 1.05.
+
+
+Package fontspec Info: 
+(fontspec)             Yas/I scale = 1.05.
+
+
+Package fontspec Info: 
+(fontspec)             Yas/BI scale = 1.05.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'Yas(1)' created for font 'Yas' with
+(fontspec)             options [Scale=1.05].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1.05]"Yas/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.05]"Yas/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1.05]"Yas/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1.05]"Yas/BI/OT:script=latn;language=dflt;"
+
+Package unicode-persianmath Info: DefiningthedefaultPersianmathdigitsfontas'Yas
+' on input line 24.
+\sympersianoperators=\mathgroup6
+\sympersianoperatorsbf=\mathgroup7
+\sympersianoperatorsit=\mathgroup8
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/l3backend-xetex.def
+File: l3backend-xetex.def 2026-09-09 L3 backend support: XeTeX
+\g__graphics_track_int=\count358
+\g__pdfannot_backend_int=\count359
+\g__pdfannot_backend_link_int=\count360
+)
+(./all.aux)
+\openout1 = `all.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(99.58464pt, 674.33032pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=674.33032pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-22.68535pt
+* \headheight=25.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/m/n' will be
+(Font)              scaled to size 26.12407pt on input line 80.
+LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/b/n' will be
+(Font)              scaled to size 26.12407pt on input line 80.
+LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/m/n' will be
+(Font)              scaled to size 15.12003pt on input line 81.
+LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/m/n' will be
+(Font)              scaled to size 18.14404pt on input line 85.
+LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/b/n' will be
+(Font)              scaled to size 18.14404pt on input line 85.
+(./all.toc
+LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/b/n' will be
+(Font)              scaled to size 12.60004pt on input line 1.
+LaTeX Font Info:    Font shape `TU/Yas(0)/b/n' will be
+(Font)              scaled to size 12.60004pt on input line 1.
+LaTeX Font Info:    Font shape `TU/Yas(0)/m/n' will be
+(Font)              scaled to size 12.60004pt on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `TU/Yas(1)/m/n' will be
+(Font)              scaled to size 12.60004pt on input line 2.
+LaTeX Font Info:    Font shape `TU/Yas(1)/m/n' will be
+(Font)              scaled to size 8.40002pt on input line 2.
+LaTeX Font Info:    Font shape `TU/Yas(1)/m/n' will be
+(Font)              scaled to size 6.30002pt on input line 2.
+LaTeX Font Info:    Font shape `TU/Yas(1)/bx/n' in size <12> not available
+(Font)              Font shape `TU/Yas(1)/b/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `TU/Yas(1)/b/n' will be
+(Font)              scaled to size 12.60004pt on input line 2.
+LaTeX Font Info:    Font shape `TU/Yas(1)/bx/n' in size <8> not available
+(Font)              Font shape `TU/Yas(1)/b/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `TU/Yas(1)/b/n' will be
+(Font)              scaled to size 8.40002pt on input line 2.
+LaTeX Font Info:    Font shape `TU/Yas(1)/bx/n' in size <6> not available
+(Font)              Font shape `TU/Yas(1)/b/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `TU/Yas(1)/b/n' will be
+(Font)              scaled to size 6.30002pt on input line 2.
+LaTeX Font Info:    Font shape `TU/Yas(1)/m/it' will be
+(Font)              scaled to size 12.60004pt on input line 2.
+LaTeX Font Info:    Font shape `TU/Yas(1)/m/it' will be
+(Font)              scaled to size 8.40002pt on input line 2.
+LaTeX Font Info:    Font shape `TU/Yas(1)/m/it' will be
+(Font)              scaled to size 6.30002pt on input line 2.
+LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/m/n' will be
+(Font)              scaled to size 11.49753pt on input line 18.
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[1
+
+]
+Missing character: There is no χ (U+03C7) in font XB Niloofar/OT:script=latn;la
+nguage=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no τ (U+03C4) in font XB Niloofar/OT:script=latn;la
+nguage=dflt;script=arab;mapping=persian-tex-text;!
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[2])
+\tf@toc=\write3
+\openout3 = `all.toc'.
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[3]
+LaTeX Font Info:    Font shape `TU/Yas(0)/b/n' will be
+(Font)              scaled to size 18.14404pt on input line 89.
+LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/b/n' will be
+(Font)              scaled to size 15.12003pt on input line 93.
+LaTeX Font Info:    Font shape `TU/Yas(0)/b/n' will be
+(Font)              scaled to size 15.12003pt on input line 93.
+LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/m/n' will be
+(Font)              scaled to size 8.40002pt on input line 115.
+LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/m/n' will be
+(Font)              scaled to size 6.30002pt on input line 115.
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[4]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[5]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[6]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[7]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[8]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[9]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[10]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[11]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[12]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[13]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[14]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[15]
+Missing character: There is no χ (U+03C7) in font XB Niloofar Bold/OT:script=la
+tn;language=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no τ (U+03C4) in font XB Niloofar Bold/OT:script=la
+tn;language=dflt;script=arab;mapping=persian-tex-text;!
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[16]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[17]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[18]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[19]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[20]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[21]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[22]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[23]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[24]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[25]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[26]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[27]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[28]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[29]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[30]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[31]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[32]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[33]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[34]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[35] (./all.aux)
+ ***********
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-09-09>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 9967 strings out of 467696
+ 240829 string characters out of 5420311
+ 682694 words of memory out of 5000000
+ 38931 multiletter control sequences out of 15000+600000
+ 634323 words of font info for 129 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 87i,13n,93p,1180b,453s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on all.pdf (35 pages).
